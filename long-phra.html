@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ลงพระ – สุ่มม้าทรงเทศกาลกินผักภูเก็ต</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#8e0f14;--bg2:#5e080c;--paper:#fdf3dc;--ink:#3a1410;--red:#b3121a;--gold:#e8b93c;--gold2:#a8770f;--mute:#7d5a45}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#2b1512;--ink:#fbe9c8;--mute:#cfa98a;--gold2:#e8b93c;--red:#ef5350}}
+:root[data-theme="dark"]{--paper:#2b1512;--ink:#fbe9c8;--mute:#cfa98a;--gold2:#e8b93c;--red:#ef5350}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;color:var(--ink);font-family:"Noto Sans Thai","Sarabun",system-ui,sans-serif;line-height:1.55;
+background:radial-gradient(circle at 50% 0,var(--bg),var(--bg2));background-attachment:fixed;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;opacity:.07;pointer-events:none;
+background-image:radial-gradient(circle,#e8b93c 2px,transparent 3px),radial-gradient(circle,#e8b93c 2px,transparent 3px);background-size:48px 48px;background-position:0 0,24px 24px}
+.wrap{position:relative;max-width:520px;margin:0 auto;padding:10px 14px 36px;text-align:center}
+.lamps{display:flex;justify-content:space-between;height:92px;padding:0 6px;pointer-events:none}
+.lamps svg{width:64px;height:92px;transform-origin:50% 0;animation:sw 3.2s ease-in-out infinite}
+.lamps svg:last-child{animation-delay:-1.6s}
+@keyframes sw{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+h1{margin:-60px 0 0;font-size:2.1rem;color:var(--gold);text-shadow:0 2px 0 #4a0508;letter-spacing:1px}
+.zh{font-family:"Noto Serif TC","Noto Serif SC","STKaiti","KaiTi",serif;color:var(--gold)}
+.sub{color:#f7d9a2;margin:2px 0 14px}
+.dots{display:flex;justify-content:center;gap:10px;margin-bottom:12px}
+.dots i{width:12px;height:12px;border-radius:50%;border:2px solid var(--gold);display:block}
+.dots i.on{background:var(--gold)}
+.card{background:var(--paper);border:3px solid var(--gold);border-radius:18px;padding:22px 16px;position:relative;
+box-shadow:0 0 0 5px var(--red),0 0 0 7px var(--gold),0 14px 30px #0006}
+.card::before,.card::after{content:"❖";position:absolute;top:6px;color:var(--gold2);font-size:.9rem}
+.card::before{left:10px}.card::after{right:10px}
+.screen{display:none;animation:in .45s ease}
+.screen.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h2{margin:0 0 2px;font-size:1.35rem;color:var(--red)}
+.q{color:var(--mute);margin:0 0 16px;font-size:.92rem}
+.choices{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ch{flex:1;min-width:120px;padding:16px 8px;border:3px solid var(--gold2);border-radius:16px;background:transparent;color:var(--ink);font:inherit;cursor:pointer;transition:.15s}
+.ch:hover,.ch:active{background:var(--red);color:#fff;transform:scale(1.04);border-color:var(--gold)}
+.ch svg{width:70px;height:70px;display:block;margin:0 auto 6px}
+.ch .t{font-weight:700;font-size:1.1rem}
+.ch .z{font-size:.85rem;opacity:.75}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.days .ch{min-width:0;padding:12px 4px;min-height:92px}
+.days .ch .zh{font-size:2rem;line-height:1.1;display:block;color:inherit}
+.days .ch:hover .zh{color:var(--gold)}
+.days .ch:last-child{grid-column:2}
+.btn{display:inline-block;padding:14px 30px;border:3px solid var(--gold);border-radius:999px;background:linear-gradient(var(--red),#7d0b10);color:#ffe9b0;font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;box-shadow:0 4px 0 #4a0508}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #4a0508}
+.back{display:block;margin:14px auto 0;background:none;border:0;color:var(--mute);font:inherit;cursor:pointer;text-decoration:underline}
+.star{width:150px;margin:0 auto 6px;display:block}
+#tube{width:190px;height:230px;margin:6px auto;display:block;cursor:pointer;transform-origin:50% 90%}
+#tube.shake{animation:shk .14s infinite}
+@keyframes shk{0%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}100%{transform:rotate(-9deg)}}
+.seal{width:130px;height:130px;margin:0 auto 6px;border-radius:50%;background:radial-gradient(circle,var(--red),#7d0b10);border:5px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px var(--red),0 0 24px #e8b93caa;animation:pop .6s cubic-bezier(.2,1.6,.4,1)}
+.seal .zh{font-size:4.2rem;line-height:1;color:var(--gold)}
+@keyframes pop{from{transform:scale(.2) rotate(-90deg);opacity:0}to{transform:none;opacity:1}}
+#rN{margin:8px 0 0;font-size:1.45rem;color:var(--red)}
+#rZ{margin:0 0 8px;font-size:1.15rem;letter-spacing:4px}
+#rZ.zh{color:var(--gold2)}
+.info{text-align:left;border-top:2px dashed var(--gold2);padding-top:10px;margin-top:8px}
+.info p{margin:6px 0}
+.info b{color:var(--red)}
+.who{margin-top:10px;padding:8px 10px;background:#e8b93c33;border-radius:10px;font-size:.95rem}
+.cr{position:fixed;top:-20px;font-size:1.6rem;animation:fall linear forwards;pointer-events:none;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.note{color:#f0cf95;font-size:.78rem;margin-top:16px;opacity:.85}
+#dots{display:none!important}
+.qs{display:grid;gap:9px}.ans{text-align:left;padding:12px 14px;min-width:0;font-size:.98rem}
+.pb{height:8px;border-radius:9px;background:#e8b93c44;overflow:hidden}.pb i{display:block;height:100%;width:0;background:var(--red);transition:.3s}
+.tr{display:flex;align-items:center;gap:8px;font-size:.82rem;margin:3px 0;text-align:left}.tr span{width:110px;flex:none}
+.trb{flex:1;height:8px;background:#e8b93c44;border-radius:9px;overflow:hidden}.trb i{display:block;height:100%;background:var(--gold2)}
+.card.fem{--paper:#fff1f6;--ink:#4a1d33;--red:#c2447c;--gold2:#b07a1a;--mute:#8a5a70;background:linear-gradient(#fff6fa,#fde3ee)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card.fem{--paper:#35202b;--ink:#ffe6ef;--red:#f06fa4;--gold2:#e8b93c;--mute:#d9a9bd;background:#35202b}}
+:root[data-theme="dark"] .card.fem{--paper:#35202b;--ink:#ffe6ef;--red:#f06fa4;--gold2:#e8b93c;--mute:#d9a9bd;background:#35202b}
+.walkers{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 4px);height:84px;pointer-events:none;z-index:6;overflow:hidden}
+.wk{position:absolute;bottom:0;left:0;width:60px;height:80px;animation:trek 26s linear infinite;will-change:transform}
+.wk svg{width:60px;height:80px;overflow:visible;animation:bob .5s ease-in-out infinite}
+.wk.b{animation-duration:32s;animation-delay:-11s}.wk.c{animation-duration:38s;animation-delay:-22s}
+.wk.b svg{animation-duration:.62s}.wk.c svg{animation-duration:.55s}
+@keyframes trek{from{transform:translateX(-80px)}to{transform:translateX(calc(100vw + 20px))}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}
+.lg{transform-box:fill-box;transform-origin:50% 0;animation:leg .5s ease-in-out infinite alternate}
+.lg.r{animation-direction:alternate-reverse}
+@keyframes leg{from{transform:rotate(-28deg)}to{transform:rotate(28deg)}}
+.arm{transform-box:fill-box;transform-origin:50% 0;animation:leg .5s ease-in-out infinite alternate-reverse}
+@media (prefers-reduced-motion:reduce){.wk,.wk svg,.lg,.arm{animation:none}.wk{left:12px}}
+.wrap{padding-bottom:110px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="lamps">
+<svg viewBox="0 0 64 92"><path d="M32 0v14" stroke="#e8b93c" stroke-width="3"/><ellipse cx="32" cy="48" rx="26" ry="30" fill="#d3161d" stroke="#e8b93c" stroke-width="3"/><path d="M32 18v60M16 22q-8 26 0 52M48 22q8 26 0 52" stroke="#e8b93c" stroke-width="1.6" fill="none" opacity=".7"/><rect x="20" y="14" width="24" height="7" rx="2" fill="#e8b93c"/><rect x="20" y="75" width="24" height="7" rx="2" fill="#e8b93c"/><path d="M32 82v10M28 84v8M36 84v8" stroke="#e8b93c" stroke-width="2.4"/></svg>
+<svg viewBox="0 0 64 92"><path d="M32 0v14" stroke="#e8b93c" stroke-width="3"/><ellipse cx="32" cy="48" rx="26" ry="30" fill="#d3161d" stroke="#e8b93c" stroke-width="3"/><path d="M32 18v60M16 22q-8 26 0 52M48 22q8 26 0 52" stroke="#e8b93c" stroke-width="1.6" fill="none" opacity=".7"/><rect x="20" y="14" width="24" height="7" rx="2" fill="#e8b93c"/><rect x="20" y="75" width="24" height="7" rx="2" fill="#e8b93c"/><path d="M32 82v10M28 84v8M36 84v8" stroke="#e8b93c" stroke-width="2.4"/></svg>
+</div>
+<h1>ลงพระ</h1>
+<p class="sub zh">九皇大帝 · 食菜 · ภูเก็ต</p>
+<div class="dots" id="dots"><i></i><i></i><i></i><i></i></div>
+
+<div class="card" id="card">
+<!-- 0 intro -->
+<div class="screen on" id="s0">
+<svg class="star" viewBox="0 0 150 90"><g stroke="#e8b93c" stroke-width="2" fill="none"><path d="M12 70L36 56 60 50 84 40 96 22 124 18 138 36 112 44 84 40"/></g><g fill="#c8161d" stroke="#e8b93c" stroke-width="2"><circle cx="12" cy="70" r="6"/><circle cx="36" cy="56" r="6"/><circle cx="60" cy="50" r="6"/><circle cx="84" cy="40" r="7"/><circle cx="96" cy="22" r="6"/><circle cx="124" cy="18" r="6"/><circle cx="138" cy="36" r="6"/></g></svg>
+<h2>ถ้าได้ลงพระ… องค์ไหนจะมาประทับ?</h2>
+<p class="q">ในเทศกาลกินผัก ม้าทรงคือ "ม้าตัวประเสริฐ" ที่เทพเจ้าเลือกลงมาโปรดสัตว์และรับเคราะห์แทนผู้คน มาลองดูว่าคุณจะถูกเลือกโดยองค์ใด</p>
+<button class="btn" data-go="s1">🙏 เริ่มอัญเชิญ</button>
+</div>
+
+<!-- 1 gender -->
+<div class="screen" id="s1">
+<h2>ท่านเป็นผู้ใด?</h2><p class="q zh" style="color:var(--gold2)">性別</p>
+<div class="choices">
+<button class="ch" data-set="g" data-v="♂ ชาย"><svg viewBox="0 0 70 70"><circle cx="30" cy="40" r="17" fill="none" stroke="currentColor" stroke-width="5"/><path d="M42 28L62 8M46 8h16v16" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><span class="t">ชาย</span><span class="z zh">男</span></button>
+<button class="ch" data-set="g" data-v="♀ หญิง"><svg viewBox="0 0 70 70"><circle cx="35" cy="26" r="17" fill="none" stroke="currentColor" stroke-width="5"/><path d="M35 43v22M24 55h22" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><span class="t">หญิง</span><span class="z zh">女</span></button>
+</div></div>
+
+<!-- 2 day -->
+<div class="screen" id="s2">
+<h2>ท่านเกิดวันอะไร?</h2><p class="q zh" style="color:var(--gold2)">生辰日</p>
+<div class="days" id="days"></div>
+<button class="back" data-back>← ย้อนกลับ</button></div>
+
+<!-- 3 time -->
+<div class="screen" id="s3">
+<h2>เกิดช่วงเวลาใด?</h2><p class="q zh" style="color:var(--gold2)">時辰</p>
+<div class="choices">
+<button class="ch" data-set="t" data-v="ตอนเช้า"><svg viewBox="0 0 70 70"><circle cx="35" cy="40" r="14" fill="#e8b93c" stroke="#a8770f" stroke-width="3"/><g stroke="#e8b93c" stroke-width="4" stroke-linecap="round"><path d="M35 12v8M12 40h8M50 40h8M19 24l6 6M51 24l-6 6"/></g><path d="M6 62h58" stroke="#c8161d" stroke-width="4" stroke-linecap="round"/></svg><span class="t">ตอนเช้า</span><span class="z zh">日 · 晨</span></button>
+<button class="ch" data-set="t" data-v="ตอนกลางคืน"><svg viewBox="0 0 70 70"><path d="M46 10a26 26 0 1 0 14 40A22 22 0 0 1 46 10z" fill="#e8b93c" stroke="#a8770f" stroke-width="3"/><circle cx="18" cy="16" r="2.5" fill="#e8b93c"/><circle cx="58" cy="22" r="2" fill="#e8b93c"/><circle cx="12" cy="40" r="2" fill="#e8b93c"/></svg><span class="t">ตอนกลางคืน</span><span class="z zh">月 · 夜</span></button>
+</div>
+<button class="back" data-back>← ย้อนกลับ</button></div>
+
+<!-- side -->
+<div class="screen" id="sSide">
+<h2>ท่านปรารถนาเทพองค์ใด?</h2><p class="q zh" style="color:var(--gold2)">女神</p>
+<div class="choices">
+<button class="ch" data-set="side" data-v="f"><span class="zh" style="font-size:2.6rem;display:block;color:var(--red)">娘</span><span class="t">เทพสตรีเท่านั้น</span><span class="z">กวนอิม · ทับทิม · โต๊ะบ๊อ ฯลฯ</span></button>
+<button class="ch" data-set="side" data-v="a"><span class="zh" style="font-size:2.6rem;display:block;color:var(--red)">神</span><span class="t">ทุกองค์</span><span class="z">รวมเทพบุรุษและเทพสตรี</span></button>
+</div><button class="back" data-back>← ย้อนกลับ</button></div>
+
+<!-- quiz -->
+<div class="screen" id="sQ">
+<p class="q" id="qN" style="margin:0 0 4px"></p>
+<div class="pb"><i id="qb"></i></div>
+<h2 id="qT" style="margin-top:12px"></h2><p class="q" id="qQ"></p>
+<div class="qs" id="qo"></div>
+<button class="back" id="qback">← ย้อนกลับ</button></div>
+
+<!-- 4 draw -->
+<div class="screen" id="s4">
+<h2>เขย่ากระบอกเซียมซี</h2><p class="q" id="who0">แตะกระบอกเพื่ออัญเชิญเทพเจ้า</p>
+<svg id="tube" viewBox="0 0 190 230"><g stroke="#a8770f" stroke-width="2"><rect x="62" y="14" width="10" height="90" rx="3" fill="#f3d68a" transform="rotate(-12 67 104)"/><rect x="82" y="2" width="10" height="100" rx="3" fill="#f3d68a" transform="rotate(-3 87 102)"/><rect x="102" y="8" width="10" height="96" rx="3" fill="#f3d68a" transform="rotate(5 107 104)"/><rect x="120" y="16" width="10" height="88" rx="3" fill="#f3d68a" transform="rotate(13 125 104)"/></g><path d="M44 96h102l-8 124q-1 8-9 8H61q-8 0-9-8z" fill="#c8161d" stroke="#e8b93c" stroke-width="4"/><rect x="40" y="90" width="110" height="14" rx="5" fill="#e8b93c"/><circle cx="95" cy="160" r="30" fill="#e8b93c"/><text x="95" y="174" text-anchor="middle" font-size="40" font-weight="700" fill="#b3121a" font-family="serif">佛</text></svg>
+<button class="btn" id="go">🙏 คุณคู่ควรกับพระองค์ไหน?</button>
+<button class="back" data-back>← ย้อนกลับ</button></div>
+
+<!-- 5 result -->
+<div class="screen" id="s5">
+<div class="seal"><span class="zh" id="rS"></span></div>
+<h2 id="rH">เทพเจ้าทรงเลือกท่าน</h2>
+<h3 id="rN"></h3><p class="zh" id="rZ"></p>
+<div class="info"><p><b>บทบาท:</b> <span id="rR"></span></p><p><b>ลักษณะม้าทรง:</b> <span id="rT"></span></p></div>
+<div id="bars" style="margin-top:10px"></div><div class="who" id="rM"></div><br>
+<button class="btn" id="again">🔄 คุณคู่ควรกับพระองค์ไหน?</button>
+</div>
+</div>
+<div class="walkers" aria-hidden="true">
+<div class="wk"><svg viewBox="0 0 60 80"><path d="M44 56q14-2 10-16q-2-6-8-4" fill="none" stroke="#a8662a" stroke-width="4" stroke-linecap="round"/><g class="lg"><rect x="20" y="62" width="7" height="15" rx="3.5" fill="#3a1410"/></g><g class="lg r"><rect x="33" y="62" width="7" height="15" rx="3.5" fill="#3a1410"/></g><rect x="16" y="42" width="28" height="26" rx="10" fill="#d3161d" stroke="#e8b93c" stroke-width="2"/><path d="M16 56h28" stroke="#e8b93c" stroke-width="3"/><g class="arm"><rect x="42" y="44" width="6" height="14" rx="3" fill="#c98b4a"/></g><path d="M52 20v50" stroke="#e8b93c" stroke-width="3"/><circle cx="30" cy="26" r="19" fill="#c98b4a"/><circle cx="10" cy="26" r="6" fill="#c98b4a"/><circle cx="50" cy="26" r="6" fill="#c98b4a"/><path d="M30 15C19 15 16 28 20 33q10 6 20 0c4-5 1-18-10-18z" fill="#f5d7a8"/><path d="M12 14h36" stroke="#e8b93c" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="26" r="2.6" fill="#3a1410"/><circle cx="36" cy="26" r="2.6" fill="#3a1410"/><path d="M25 32q5 4 10 0" fill="none" stroke="#3a1410" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="31" r="2.5" fill="#f48a8a" opacity=".7"/><circle cx="40" cy="31" r="2.5" fill="#f48a8a" opacity=".7"/></svg></div>
+<div class="wk b"><svg viewBox="0 0 60 80"><g class="lg"><rect x="21" y="64" width="7" height="13" rx="3.5" fill="#7a3b12"/></g><g class="lg r"><rect x="32" y="64" width="7" height="13" rx="3.5" fill="#7a3b12"/></g><rect x="14" y="42" width="32" height="28" rx="11" fill="#f0a020" stroke="#b3121a" stroke-width="3"/><path d="M14 50l32 14" stroke="#b3121a" stroke-width="5"/><g class="arm"><rect x="44" y="46" width="6" height="13" rx="3" fill="#f8d9b4"/></g><circle cx="30" cy="26" r="18" fill="#f8d9b4"/><circle cx="30" cy="10" r="2.5" fill="#d3161d"/><path d="M22 27q3-3 6 0M32 27q3-3 6 0" fill="none" stroke="#3a1410" stroke-width="2" stroke-linecap="round"/><path d="M25 33q5 5 10 0" fill="none" stroke="#3a1410" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="31" r="2.5" fill="#f48a8a" opacity=".7"/><circle cx="40" cy="31" r="2.5" fill="#f48a8a" opacity=".7"/><circle cx="30" cy="46" r="2.2" fill="#7a3b12"/><circle cx="24" cy="45" r="2.2" fill="#7a3b12"/><circle cx="36" cy="45" r="2.2" fill="#7a3b12"/></svg></div>
+<div class="wk c"><svg viewBox="0 0 60 80"><g class="lg"><rect x="20" y="64" width="8" height="13" rx="4" fill="#d9708a"/></g><g class="lg r"><rect x="32" y="64" width="8" height="13" rx="4" fill="#d9708a"/></g><rect x="13" y="42" width="34" height="28" rx="12" fill="#3d9a6a" stroke="#e8b93c" stroke-width="2"/><g class="arm"><rect x="45" y="46" width="6" height="13" rx="3" fill="#f4a0b4"/></g><path d="M54 28v42M49 28h10" stroke="#9a9a9a" stroke-width="3" stroke-linecap="round"/><ellipse cx="12" cy="18" rx="7" ry="10" fill="#f4a0b4" transform="rotate(25 12 18)"/><ellipse cx="48" cy="18" rx="7" ry="10" fill="#f4a0b4" transform="rotate(-25 48 18)"/><circle cx="30" cy="27" r="19" fill="#f4a0b4"/><ellipse cx="30" cy="33" rx="9" ry="6.5" fill="#f7bccb"/><circle cx="27" cy="33" r="1.6" fill="#7a2a3e"/><circle cx="33" cy="33" r="1.6" fill="#7a2a3e"/><circle cx="22" cy="24" r="2.6" fill="#3a1410"/><circle cx="38" cy="24" r="2.6" fill="#3a1410"/></svg></div>
+</div>
+<p class="note">สร้างเพื่อความบันเทิงและเผยแพร่วัฒนธรรมเทศกาลกินผักภูเก็ต โปรดให้ความเคารพต่อความศรัทธา</p>
+</div>
+
+<script>
+var T={G:"บารมี/ซื่อสัตย์",K:"เมตตา/สุขุม",N:"พลังบริสุทธิ์",H:"ปัญญา/ไหวพริบ",J:"ฮีล/สุขภาพ"};
+var M=[
+{s:"哪",n:"พระนาจาซ๋านไท่จื้อ",z:"哪吒三太子",r:"เทพกุมาร แม่ทัพฝั่งตะวันออก",t:"ร่าเริง อารมณ์ดี ชอบเล่นสิ่งของ เช่น กิ่งหลิว หอก และวงแหวนเคียนคุนเซียน บางครั้งแจกลูกอมหรือของกินให้เด็กๆ",w:{N:1,H:.2}},
+{s:"玉",n:"พระหยกอ๋องซ้องเต้ (เง็กเซียนฮ่องเต้)",z:"玉皇大帝",r:"ราชาแห่งสวรรค์และจักรวาล",t:"ทรงอำนาจ สุภาพ สง่างาม กิริยาเรียบร้อย น่าเคารพยำเกรง มักลงมาในพิธีสำคัญใหญ่ๆ เท่านั้น",w:{G:.7,K:.3}},
+{s:"老",n:"พระเล่าจื๊อ (ไท่เชิงเล่ากุน)",z:"太上老君",r:"บรมครูแห่งลัทธิเต๋า",t:"ผู้ทรงศีล สุขุม สงบนิ่ง เดินช้าๆ คล้ายฤาษี มักใช้พัดจีบหรือพัดขนนกในการอวยพร",w:{K:.7,H:.4}},
+{s:"官",n:"พระสามฮ่องเต้ (ซำฮกเต้)",z:"三官大帝",r:"เทพผู้ปกครองสามภพ: สวรรค์ มนุษย์ และบาดาล",t:"กิริยาสูงส่ง น่าเกรงขาม มักประทับทรงเพื่อปัดเป่าเสนียดจัญไรหรือเจริญพระพุทธมนต์",w:{G:.4,K:.4,J:.3}},
+{s:"醫",n:"พระองค์ต๋านฮ๋องจินซุ่ย",z:"醫神",r:"เทพแห่งยาและการรักษาโรค (เทพหมอ)",t:"ใจดี สุขุม มักใช้พู่กันเขียนยันต์อวยพรผู้ป่วย หรือแจกฮู้เพื่อรักษาและปัดเป่าโรคภัย",w:{J:1,K:.2}},
+{s:"關",n:"เหล่าเตี๋ย (กวนอู)",z:"關聖帝君",r:"เทพแห่งความซื่อสัตย์และสงคราม",t:"หน้านวลแดง รูปร่างใหญ่โต สวมชุดเกราะ ดุดัน เคร่งขรึม มือถือง้าวหรือกุมกระบี่",w:{G:1}},
+{s:"聖",n:"เฮ้งเจีย (ซุนหงอคง)",z:"齊天大聖",r:"เทพวานรผู้พิชิตมาร",t:"คล่องแคล่ว ว่องไว ซุกซน ลุกลี้ลุกลน คล้ายพฤติกรรมของลิง มักถือกระบองวิเศษ",w:{H:1,N:.2}}];
+var F=[
+{s:"觀",n:"พระแม่กวนอิมโพธิสัตว์ (กวนอินปุดจ้อ)",z:"觀音菩薩",r:"มหาเทวีแห่งความเมตตากรุณา",t:"งดงาม สำรวม เมตตา สงบนิ่ง ประทานพรด้วยน้ำมนต์หรือกิ่งหลิว บางครั้งแจกลูกอมหรือยันต์ให้ผู้เฒ่าผู้แก่และเด็กๆ",w:{K:1}},
+{s:"斗",n:"เจ้าแม่โต๊ะบ๊อ (เต้าโบ้เก้ง)",z:"斗母元君",r:"พระมารดาแห่งดาวนพเคราะห์ทั้ง 9 (มารดาของกิ้วอ๋องต่ายเต่)",t:"มีอำนาจ สง่างาม น่าเคารพยำเกรง มักประทับทรงเฉพาะในพิธีสำคัญและมีความขลังสูงมาก",w:{G:.7,K:.4}},
+{s:"媽",n:"เจ้าแม่ทับทิม (ม่าจ๋อโป๋)",z:"媽祖",r:"เทพธิดาแห่งท้องทะเล ผู้คุ้มครองการเดินทางทางน้ำและชาวประมง",t:"ใจดี มั่นคง ถือพัดหรือคฑา อวยพรเรื่องความปลอดภัยในการเดินทางและการค้าขาย",w:{G:.4,K:.3,H:.4}},
+{s:"娘",n:"เจ้าแม่กวนอิมเนี๋ยเนี๋ย (กวนอิมตั๋ง)",z:"觀音娘娘",r:"พระแม่กวนอิมในปางเทพสตรีจีนดั้งเดิม",t:"อ่อนโยน ให้ความคุ้มครองเรื่องครอบครัว เด็กเล็ก การขอบุตร และสุขภาพ",w:{K:.6,J:.5,N:.2}},
+{s:"西",n:"พระแม่กิมบ๊อ (ซีหวังหมู่)",z:"西王母",r:"พระแม่แห่งตะวันตก ผู้ปกครองสวรรค์ฝ่ายหญิง",t:"สุขุม สูงส่ง น่าเลื่อมใส ให้พรเรื่องอายุวัฒนะและความเจริญรุ่งเรือง",w:{J:.6,H:.5,K:.3}},
+{s:"后",n:"เจ้าแม่เหง็กเซียนเหนียงเหนียง",z:"玉皇娘娘",r:"พระมเหสีขององค์เง็กเซียนฮ่องเต้",t:"มีบารมี น่าเกรงขาม สง่างาม มักสวมเครื่องแต่งกายสีเหลืองหรือทอง",w:{G:.6,N:.3,K:.3}},
+{s:"三",n:"เจ้าแม่สามกวนเหนียง",z:"三官娘娘",r:"เทพสตรีในกลุ่มเทพสามภพ",t:"ทำหน้าที่ปัดเป่าเสนียดจัญไรและสิ่งอัปมงคล",w:{G:.4,K:.3,J:.5}}];
+var Q=[
+["วิธีจัดการปัญหา","เจออุปสรรคใหญ่ในชีวิต หรืองานด่วนชนกัน คุณมักจะ…",["พุ่งชนตรงๆ ลุยแก้ปัญหาด้วยความกล้าหาญ เด็ดขาด","ใช้ไหวพริบ หาทางพลิกแพลงเอาตัวรอดอย่างรวดเร็ว","ใจเย็น สูดหายใจลึกๆ คิดอย่างสุขุม ใช้ความเมตตาและเหตุผล","ลุยสุดตัวแบบวัยรุ่น ไม่ชอบคิดซับซ้อน เอาความจริงใจเข้าสู้"],["G","H","K","N"]],
+["บทบาทในกลุ่มเพื่อน","ในกลุ่มเพื่อนหรือทีมงาน คุณมักรับบทเป็นใคร?",["ผู้นำ/พี่ใหญ่ที่ทุกคนเกรงใจและพร้อมปกป้องคนในทีม","ที่ปรึกษา/หมอประจำกลุ่ม คอยรับฟังและฮีลใจทุกคน","ตัวเปิด/สายสร้างสีสัน พลังเยอะ คิดนอกกรอบ","ผู้ทรงภูมิ คอยให้ข้อคิดและมองภาพรวมอย่างสงบนิ่ง"],["G","KJ","NH","KH"]],
+["สิ่งยึดเหนี่ยวจิตใจ","สี หรือเครื่องรางแบบไหนที่คุณรู้สึกถูกโฉลกที่สุด?",["สีแดงมงคล / ง้าว หรือกระบี่เพิ่มอำนาจบารมี","สีขาวบริสุทธิ์ / หยกขาว น้ำมนต์ หรือกิ่งหลิว","สีทองสดใส / วงแหวน กระพรวน สิ่งนำโชคแพรวพราว","สีเขียวหยก / สมุนไพร น้ำเต้า หรือยันต์ปัดเป่าโรคภัย"],["G","K","N","J"]],
+["เมื่อเห็นคนอื่นเดือดร้อน","เมื่อเห็นเพื่อนหรือคนรอบข้างมีปัญหา คุณจะ…",["ออกตัวปกป้อง ลุยช่วยสู้ทันที ใครมารังแกไม่ได้!","เข้าไปปลอบโยน ซัพพอร์ตความรู้สึก และช่วยหาทางออกอย่างอ่อนโยน","แนะนำวิธีแก้เด็ดๆ หรือทางลัดที่คิดไม่ถึงให้ทันที","วิเคราะห์สาเหตุอย่างละเอียดแล้วจัดยารักษาตรงจุด"],["GN","K","H","J"]],
+["สภาพแวดล้อมที่ชอบ","สภาพแวดล้อมแบบไหนที่ทำให้คุณสบายใจและมีพลังที่สุด?",["สถานที่สงบ ร่มรื่น มีเสียงธรรมชาติหรือเสียงสวดมนต์เบาๆ","สนามทดลอง/สถานที่ตื่นเต้น ได้ปล่อยพลังและทำสิ่งใหม่ๆ","ที่ที่มีผู้คนร่วมเคียงบารมี หรือได้แสดงศักยภาพ","ที่สูงๆ มองเห็นวิวกว้างไกล คล่องตัว ไม่มีอะไรมาผูกมัด"],["K","N","G","H"]],
+["เมื่อต้องตัดสินใจเรื่องสำคัญ","คุณใช้สิ่งใดเป็นหลักในการตัดสินใจ?",["ศักดิ์ศรี ความถูกต้อง และความซื่อสัตย์สุจริต","ความเห็นอกเห็นใจ ผลกระทบต่อจิตใจของผู้คน","สัญชาตญาณความว่องไว และความได้เปรียบในสถานการณ์","ความปลอดภัย ความแม่นยำ และสุขอนามัยของชีวิต"],["G","K","H","J"]],
+["อาหารเจที่ชอบ","เดินในงานกินผักภูเก็ต คุณจะพุ่งไปซื้ออะไรก่อน?",["หมี่ผัดฮกเกี้ยนเจจานใหญ่ พลังงานเต็มเปี่ยม","ซุปเต้าหู้ตุ๋นยาจีน หรือซุปร้อนๆ สบายท้อง","ขนมหวานเจ อิ่วก้วย ขนมต้ม ของทานเล่นร่าเริงใจ","เมนูประยุกต์แปลกใหม่ ล่าเหมยเจ หรืออาหารเจไอเดียสร้างสรรค์"],["G","J","N","H"]],
+["การรับมือกับความเครียด","เวลาเหนื่อยล้าจากโลกภายนอก คุณมักฮีลตัวเองอย่างไร?",["นั่งสมาธิ ฟังเพลงสบายๆ ชาดีๆ สักแก้ว ละวางความวุ่นวาย","ออกไปทำกิจกรรม ไปเที่ยว ปล่อยพลังให้หายอุดอู้","อยู่กับคนที่ไว้ใจ นัดกินข้าวพูดคุยกับมิตรแท้","พักผ่อนนอนหลับ ทานอาหารดีๆ บำรุงร่างกายให้สมดุล"],["K","NH","G","J"]],
+["ทัศนคติต่อความซื่อสัตย์","สิ่งไหนที่คุณ “รับไม่ได้” มากที่สุดในตัวมนุษย์?",["การทรยศ หักหลัง และการไร้ความซื่อสัตย์","ความใจแคบ ความโหดร้าย ไร้เมตตาต่อเพื่อนมนุษย์","ความตึงเครียด ยึดติดโบราณ ไม่ยอมเปิดรับสิ่งใหม่","ความประมาท เลินเล่อ ไม่ดูแลตัวเองและคนรอบข้าง"],["G","K","H","J"]],
+["คำอธิษฐานสูงสุด","ถ้าขอพรได้ 1 ข้อในเทศกาลกินผัก คุณอยากขออะไรมากที่สุด?",["สุขภาพแข็งแรง ปราศจากโรคภัยไข้เจ็บทั้งปวง","ครอบครัวและคนรักมีความสุข จิตใจสงบร่มเย็น","ประสบความสำเร็จ มีบริวารดี ชนะอุปสรรคศัตรูทั้งปวง","ปัญญาเฉียบแหลม คิดทำสิ่งใดก็ลื่นไหลไร้ปัญหา"],["J","K","G","H"]]];
+var D=[["จันทร์","一"],["อังคาร","二"],["พุธ","三"],["พฤหัสฯ","四"],["ศุกร์","五"],["เสาร์","六"],["อาทิตย์","日"]];
+var S={},sc,qi,ans,hist=[],busy=false,$=function(i){return document.getElementById(i)};
+D.forEach(function(d){var b=document.createElement("button");b.className="ch";b.dataset.set="d";b.dataset.v=d[0];
+b.innerHTML='<span class="zh">'+d[1]+'</span><span class="t">'+d[0]+'</span>';$("days").appendChild(b)});
+function isF(){return S.g&&S.g.indexOf("หญิง")>-1}
+function show(id,back){var c=document.querySelector(".screen.on");if(!back&&c)hist.push(c.id);
+[].forEach.call(document.querySelectorAll(".screen"),function(s){s.classList.toggle("on",s.id===id)});
+if(id==="s4")$("who0").textContent=S.g+" · เกิดวัน"+S.d+" · "+S.t+" — แตะกระบอกเพื่ออัญเชิญเทพเจ้า"}
+function goBack(){var p=hist.pop();if(p)show(p,true)}
+function startQ(){sc={G:0,K:0,N:0,H:0,J:0};qi=0;ans=[];renderQ();show("sQ")}
+function renderQ(){var q=Q[qi];$("qN").textContent="ข้อ "+(qi+1)+" / "+Q.length;$("qb").style.width=((qi)/Q.length*100)+"%";
+$("qT").textContent=q[0];$("qQ").textContent=q[1];var o=$("qo");o.innerHTML="";
+q[2].forEach(function(t,i){var b=document.createElement("button");b.className="ch ans";b.textContent="ABCD"[i]+". "+t;b.onclick=function(){pick(i)};o.appendChild(b)})}
+function pick(i){var k=Q[qi][3][i];ans[qi]=k;k.split("").forEach(function(c){sc[c]+=1/k.length});
+qi++;if(qi>=Q.length){$("qb").style.width="100%";show("s4")}else renderQ()}
+function qBack(){if(qi>0){qi--;ans[qi].split("").forEach(function(c){sc[c]-=1/ans[qi].length});renderQ()}else goBack()}
+document.addEventListener("click",function(e){
+var b=e.target.closest("[data-set]");
+if(b){S[b.dataset.set]=b.dataset.v;var id=document.querySelector(".screen.on").id;
+if(id==="s1")show(isF()?"sSide":"s2");else if(id==="sSide"||id==="s2")show(id==="s2"?"s3":"s2");else startQ();return}
+var g=e.target.closest("[data-go]");if(g)show(g.dataset.go);
+if(e.target.closest("[data-back]"))goBack()});
+$("qback").onclick=qBack;
+function rain(){var a=["🧧","🏮","✨","🎆","🪔"];for(var i=0;i<22;i++){(function(){var s=document.createElement("span");s.className="cr";
+s.textContent=a[Math.floor(Math.random()*a.length)];s.style.left=Math.random()*100+"vw";s.style.animationDuration=(2+Math.random()*2)+"s";
+document.body.appendChild(s);setTimeout(function(){s.remove()},4200)})()}}
+function draw(){
+if(busy)return;busy=true;var t=$("tube");t.classList.add("shake");$("go").disabled=true;
+setTimeout(function(){t.classList.remove("shake");
+var pool=!isF()?M:(S.side==="f"?F:M.concat(F)),best=null,bv=-1;
+pool.forEach(function(p){var v=Math.random()*.6;for(var k in p.w)v+=p.w[k]*sc[k];if(v>bv){bv=v;best=p}});
+var p=best,fem=F.indexOf(p)>-1;$("card").classList.toggle("fem",fem);
+$("rS").textContent=p.s;$("rN").textContent=p.n;$("rZ").textContent=p.z;$("rR").textContent=p.r;$("rT").textContent=p.t;
+$("rM").textContent=S.g+" · เกิดวัน"+S.d+" "+S.t+" — "+p.n+" ทรงเลือกท่านเป็นม้าทรง 🙏";
+var h="";for(var k in T){h+='<div class="tr"><span>'+T[k]+'</span><div class="trb"><i style="width:'+Math.round(sc[k]/Math.max(1,sc.G+sc.K+sc.N+sc.H+sc.J)*100*2.2>100?100:sc[k]/Math.max(1,sc.G+sc.K+sc.N+sc.H+sc.J)*220)+'%"></i></div></div>'}
+$("bars").innerHTML=h;
+show("s5");rain();$("go").disabled=false;busy=false},1600)}
+$("go").addEventListener("click",draw);$("tube").addEventListener("click",draw);
+$("again").addEventListener("click",function(){S={};hist=[];$("card").classList.remove("fem");show("s0")});
+</script>
+</body>
+</html>
